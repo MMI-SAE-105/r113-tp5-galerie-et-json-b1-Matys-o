@@ -54,13 +54,38 @@ rgba(0,0,0,0.9) right right sans-serif text-align top top width width
     height: 100%;/* Height auto for keeping the ratio */
 }
           </style>
+        </head>
+
+
 <body x-data="{
-    nomVar: 'https://picsum.photos/id/237/400/300'
-    }">
+        
+}
  <h1>Galerie</h1>
-<p>lorem⇥</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, deleniti ea. 
+    Quae porro ullam totam optio repellat magnam, mollitia officiis id, qui fuga, 
+    consequuntur ex sequi maiores. Architecto, sapiente voluptas.</p>
 <div class="overlay">
-    <figure><img src="https://picsum.photos/id/237/400/300" alt="image 237... un chiot"></figure>
+    <figure>
+        <img src="https://picsum.photos/id/237/60/60" 
+        @click="nomVar = 'https://picsum.photos/id/237/400/300'">
+        <div class="overlay" x-show="nomVar" @click="nomVar = 
+        null" @keyup.escape.window="nomVar=null">
+            <figure>
+                <img :src="nomVar" alt="image 237... un chiot">
+        <img src="img/pedro-lastra-Nyvq2juw4_o-unsplash.jpg" 
+        @click="nomVar = 'img/pedro-lastra-Nyvq2juw4_o-unsplash.jpg'">
+        <div class="overlay" x-show="nomVar" @click="nomVar = 
+        null" @keyup.escape.window="nomVar=null">
+            <figure>
+                <img :src="nomVar" alt="image 238... New York">
+            </figure>
+        <img src="img/koukichi-takahashi-fZdX9BW8WDs-unsplash.jpg"
+        @click="nomVar = 'img/koukichi-takahashi-fZdX9BW8WDs-unsplash.jpg'">
+        <div class="overlay" x-show="nomVar" @click="nomVar = 
+        null" @keyup.escape.window="nomVar=null">
+            <figure>
+                <img :src="nomVar" alt="image 239... Tokyo">
+            </figure>
 </div>
 </body>
 </html>

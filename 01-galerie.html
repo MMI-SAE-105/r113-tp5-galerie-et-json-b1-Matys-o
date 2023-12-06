@@ -2,10 +2,9 @@
     <html lang="fr">
         <head>
           <meta charset="UTF-8" />
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>Accordéon avec des booléens</title>
-          <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+          <title>Galerie</title>
+          <script src="//unpkg.com/alpinejs" defer></script>
           <style>
             .vrac {
 "X" #000 #fff #fff 2px solid 0 0 0 0 0 100% 100% 100% 1rem 1rem 1rem 2px
@@ -23,26 +22,26 @@ rgba(0,0,0,0.9) right right sans-serif text-align top top width width
     left: 0;/* Stay at the left */
     right: 0;/* Stay at the right */
     bottom: 0;/* Stay at the bottom */
-    background-color: black;/* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.998);/* Black background with opacity */
     cursor: pointer;/* Add a pointer on hover */
     display: grid;/* Use a grid for easy centering */
     place-content: center;/* Center vertically and horizontally */
 }
 .overlay::after {
-    /* Add content : "X" */
-    /* White text color */
-    /* Black background color */
-    /* Font family "sans-serif" */
-    /* Centered text */
-    /* Line height ( idem height ) */
-    /* Display as a block */
-    /* Position absolute */
-    /* 1rem from the top */
-    /* 1rem from the right */
-    /* 2rem width */
-    /* 2rem height */
-    /* White border of 2px */
-    /* Rounded border */
+    content: "X";/* Add content : "X" */
+    color: #fff;/* White text color */
+    background-color: black;/* Black background color */
+    font-family: sans-serif;/* Font family "sans-serif" */
+    text-align: center;/* Centered text */
+    line-height: 2rem;/* Line height ( idem height ) */
+    display: block;/* Display as a block */
+    position: absolute;/* Position absolute */
+    top: 1rem;/* 1rem from the top */
+    right: 1rem;/* 1rem from the right */
+    width: 2rem;/* 2rem width */
+    height: 2rem;/* 2rem height */
+    border: 2px solid #fff;/* White border of 2px */
+    border-radius: 50%;/* Rounded border */
 }
 .overlay>figure {
     margin: 0;/* No margin */
